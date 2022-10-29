@@ -34,7 +34,23 @@ $$
    ```
    git clone https://github.com/bokazu/class_DNS_Hamiltonian.git
    ```
-   でダウンロードします。
+   でダウンロードします。ディレクトリ構造は以下のようになります。なお、`EigenTest.cpp`、`HamiltonianTest.cpp`といったファイルは削除していただいてかまいません、下に記したファイルが存在すれば大丈夫です。
+    ```
+    dir
+    ├── DNS_Hamiltonian
+    │   ├── DNS_Hamiltonian.cpp
+    │   └── DNS_Hamiltonian.hpp
+    ├── EIGEN
+    │   ├── EIGEN.cpp
+    │   ├── EIGEN.hpp
+    ├── Jset
+    │   ├── Jset.cpp
+    │   └── Jset.hpp
+    ├── README.md
+    ├── jset1.txt
+    ├── jset2.txt
+    └── makefile
+    ``` 
 2. 適当なcppファイルを作成します。個々では例としてmain.cppというフォルダを作成したとして説明します。
 3. 系の相互作用の情報を記述したテキストファイルを用意します。ここでは、そのファイルに`jset.txt`という名前をつけて説明します。
 4. main.cppに以下のように書き込みます。 
