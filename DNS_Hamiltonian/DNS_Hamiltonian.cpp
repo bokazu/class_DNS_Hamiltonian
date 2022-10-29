@@ -415,3 +415,20 @@ void DNS_Hamiltonian::print() const
     }
     cout << "]" << endl;
 }
+
+//文字列表現を返却する
+std::string DNS_Hamiltonian::to_string() const
+{
+    std::ostringstream s;
+
+    s << "Information of Hamiltonian" << std::endl;
+    s << "----------------------------------------------------" << std::endl;
+    s << "@Number of site    : " << tot_site_num << std::endl;
+    s << "@Matrix dimension : " << mat_dim << std::endl;
+    s << J.to_string() << std::endl;
+    s << Eig.to_string() << std::endl;
+
+    return s.str();
+}
+
+ostream& operator<<(ostream& s, const DNS_Hamiltonian& h) {return s << h.to_string(); }

@@ -91,8 +91,13 @@ class DNS_Hamiltonian
 
     // jset_filenameと系の相互作用の情報を出力する
     void jset_print() const { J.print(); }
+
+    //DNS_Hamiltonianオブジェクトの文字列表現を返却する
+    std::string to_string() const;
 };
 
+//出力ストリームにhを挿入する
+std::ostream& operator<<(std::ostream& s, const DNS_Hamiltonian& h);
 
 
 void sdz(int mat_dim, double* vec);

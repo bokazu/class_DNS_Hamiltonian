@@ -48,10 +48,10 @@ class EIGEN
     void set_eval(double val) { eigen_val = val; }
 
     //固有値の値を取得する
-    const double eval() const { return eigen_val; }
+    double eval() const { return eigen_val; }
 
     //固有ベクトルの第[i]成分を返却する
-    const double evec(int i) const { return eigen_vec[i]; }
+    double evec(int i) const { return eigen_vec[i]; }
 
     double* data() {return eigen_vec;}
     //固有ベクトルの値を初期化する
@@ -67,8 +67,5 @@ class EIGEN
 
 //出力ストリームにxを挿入する
 std::ostream& operator<<(std::ostream& s, const EIGEN& x);
-
-//ファイル出力ストリームにxを挿入する
-std::ofstream& operator<<(std::ofstream& s, const EIGEN& x);
 
 #endif

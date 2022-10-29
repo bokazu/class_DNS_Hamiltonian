@@ -131,3 +131,25 @@ void Jset::set()
         line++;
     }
 }
+
+//文字列表現を返却する
+std::string Jset::to_string() const
+{
+    std::ostringstream s;
+
+    s << "\nfile name : " << jset_filename << std::endl;
+
+    s << "======================================\n";
+    s << "i" << setw(3) << " "
+         << "j" << setw(3) << " "
+         << "J[i][j]\n";
+    s << "--------------------------------------\n";
+    for (int i = 0; i < jset_line; i++)
+    {
+        s << J_index[0][i] << setw(3) << " " << J_index[1][i] << " "
+             << setw(3) << J_val[i] << endl;
+    }
+    s << "======================================\n";
+
+    return s.str();
+}

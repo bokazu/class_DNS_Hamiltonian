@@ -65,6 +65,9 @@ class Jset
     // J_indexのgetter
     int index(int i, int j) const { return J_index[i][j]; }
     double val(int i) const { return J_val[i]; }
+
+    // Jのオブジェクトの文字列表現を返却する
+    std::string to_string() const;
 };
 
 #endif
